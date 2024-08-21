@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
@@ -13,7 +14,7 @@ int printColorMap() {
     return i * j;
 }
 
-char capturedOutput[];
+char capturedOutput[1024];
 char* captureOutput() {
     capturedOutput[0] = '\0';
     setvbuf(stdout, capturedOutput, _IOFBF, sizeof(capturedOutput));
